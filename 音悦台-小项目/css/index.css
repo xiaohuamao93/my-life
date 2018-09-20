@@ -1,0 +1,351 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+input {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+#wrap {
+  position: relative;
+  height: 100%;
+  background: #eee;
+}
+#head {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 996;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+#headerT {
+  height: 2rem;
+}
+#logo {
+  float: left;
+  padding: 0.38518519rem 0.25185185rem 0.31111111rem;
+}
+#logo img {
+  width: 3.55555556rem;
+}
+#menu {
+  float: left;
+  width: 1.91111111rem;
+  height: 2rem;
+  background: url(../img/menuBtn.png) no-repeat;
+  background-size: 1.21481481rem 3.45185185rem;
+}
+.menuBtnClos {
+  background-position: center 0.23703704rem !important;
+}
+.menuBtnOpen {
+  background-position: center -1.7037037rem !important;
+}
+#nav {
+  float: right;
+  padding-top: 0.31111111rem;
+}
+#nav a {
+  color: #ccc;
+  float: left;
+  width: 1.64444444rem;
+  height: 1.15555556rem;
+  line-height: 1.15555556rem;
+  background: #690;
+  margin-right: 0.22222222rem;
+  font-size: 0.62222222rem;
+  text-align: center;
+  border-radius: 0.11851852rem;
+}
+#nav #searchBtn {
+  width: 1.92592593rem;
+  height: 1.3037037rem;
+  line-height: 1.3037037rem;
+  color: #fff;
+  margin-right: 0.44444444rem;
+  margin-top: 0.04444444rem;
+  font-weight: bold;
+  border-radius: 0.14814815rem;
+}
+#search {
+  height: 1.52592593rem;
+  padding: 0.23703704rem;
+}
+#search input[type="text"] {
+  float: left;
+  box-sizing: border-box;
+  width: 12.28148148rem;
+  height: 1.52592593rem;
+  background: #999;
+  padding: 0.07407407rem 0.2962963rem;
+  font-size: 0.60740741rem;
+  color: #333;
+  border-radius: 0.22222222rem 0 0 0.22222222rem;
+  border: 1px solid #5a5a5a;
+}
+#search input[type="text"]:focus {
+  background: #FFFFFF;
+}
+#search input[type="text"]::-webkit-input-placeholder {
+  color: #333;
+}
+#search input[type="submit"] {
+  float: right;
+  box-sizing: border-box;
+  width: 3.00740741rem;
+  height: 1.52592593rem;
+  background: #414040;
+  font-size: 0.81481481rem;
+  color: #fff;
+  border-radius: 0 0.22222222rem 0.22222222rem 0;
+  border: none;
+}
+#mask {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  z-index: 999;
+  width: 100%;
+  padding: 0.14814815rem 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+#mask:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #6a6a6a;
+  transform: scaleY(0.5);
+}
+#mask li {
+  width: 22.5%;
+  height: 2rem;
+  line-height: 2rem;
+  float: left;
+  text-align: center;
+}
+#mask a {
+  font-size: 0.8rem;
+  color: #fff;
+}
+#content {
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#navs {
+  position: relative;
+  box-sizing: border-box;
+  height: 2.62222222rem;
+  padding: 0.45925926rem 0 0.20740741rem;
+}
+#navs:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  content: "";
+  height: 1px;
+  background: #CCCCCC;
+  width: 100%;
+  transform: scaleY(0.5);
+}
+#navs ul {
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+}
+#navs li {
+  display: inline-block;
+  font-size: 1rem;
+  height: 1.91111111rem;
+  line-height: 1.91111111rem;
+}
+#navs li a {
+  display: block;
+  height: 100%;
+  padding: 0 0.56296296rem;
+  color: #020202;
+}
+#navs .active {
+  background: #690;
+  color: #fff;
+}
+#pic_wrap {
+  position: relative;
+}
+#pic_list {
+  position: absolute;
+  list-style: none;
+  overflow: hidden;
+}
+#pic_list img {
+  display: block;
+  /*图片自适应*/
+  width: 100%;
+}
+#pic_list li {
+  float: left;
+}
+#pic_nav {
+  position: absolute;
+  left: 0;
+  bottom: 0.04444444rem;
+  width: 100%;
+  text-align: center;
+}
+#pic_nav span {
+  display: inline-block;
+  width: 0.2962963rem;
+  height: 0.2962963rem;
+  background: gray;
+  border-radius: 0.14814815rem;
+  /*在移动端使用圆角最好使用像素值*/
+}
+#pic_nav .active {
+  background: deeppink;
+}
+.tab {
+  width: 15.4962963rem;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.tab_h {
+  height: 1.55555556rem;
+  line-height: 1.55555556rem;
+}
+.tab_h h2 {
+  float: left;
+  font-size: 1rem;
+  color: #333;
+}
+.tab_h a {
+  float: right;
+  font-size: .8rem;
+  color: #333;
+}
+.tab .tab_nav {
+  position: relative;
+  height: 1.55555556rem;
+  line-height: 1.55555556rem;
+}
+.tab .tab_nav a {
+  float: left;
+  height: 1.55555556rem;
+  width: 1.77777778rem;
+  font-size: 0.65185185rem;
+  text-align: center;
+  color: #6b6b6b;
+}
+.tab .tab_nav span {
+  position: absolute;
+  left: 0;
+  bottom: 0.11851852rem;
+  width: 1.77777778rem;
+  height: 0.13333333rem;
+  background: #6f900d;
+  transition: .5s;
+}
+.tab .tab_wrap {
+  overflow: hidden;
+  width: 300%;
+}
+.tab .tab_wrap ul {
+  overflow: hidden;
+  float: left;
+  width: 33.3333333333333333333333%;
+}
+.tab .tab_wrap ul li {
+  float: left;
+  box-sizing: border-box;
+  width: 7.4962963rem;
+  margin: 0.11851852rem;
+  padding: 0.07407407rem;
+  font-size: 0.59259259rem;
+  background: #efefef ;
+  color: #000;
+}
+.tab .tab_wrap li a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tab .tab_wrap li a span {
+  color: #000;
+}
+.tab .tab_wrap li img {
+  width: 100%;
+}
+.ice {
+  overflow: hidden;
+}
+.ice .ice_l {
+  float: left;
+  margin-right: 0.3rem;
+}
+.ice .ice_r {
+  float: left;
+  margin-right: 0.3rem;
+}
+.ice .ice_l .ice_pic,
+.ice .ice_r .ice_pic {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url(../img/ice.png) no-repeat;
+  vertical-align: middle;
+}
+.ice .ice_r .ice_pic {
+  background-position: 0 -0.8rem;
+}
+.tab_wrap .tab_loading {
+  height: 1.4962963rem;
+  background: url(../img/loading.gif) no-repeat;
+  background-position: 50% 50%;
+  opacity: 0;
+}
+#scrollBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 0.17777778rem;
+  height: 100%;
+  background: deeppink;
+  opacity: 0;
+  transition: 1s opacity;
+}

@@ -1,0 +1,354 @@
+@rem:67.5rem;
+html,body,h1,h2,h3,h4,ul,li,p{
+    margin: 0;
+    padding: 0;
+    font-family:  helvetica;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+}
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+input{
+    //处理ios底下圆角渲染太过分的问题
+    -webkit-appearance: none;
+    //解决边框高亮
+    outline: none;
+    //解决内阴影问题
+    border: none;
+}
+#wrap{
+    position: relative;
+    height: 100%;
+    background: #eee;
+}
+
+
+#head{
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 996;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+#headerT{
+    height: 135/@rem;
+}
+#logo{
+    float: left;
+    padding:26/@rem 17/@rem 21/@rem ;
+}
+#logo img{
+    width: 240/@rem;
+}
+#menu{
+    float: left;
+    width: 129/@rem;
+    height: 135/@rem;
+    background: url(../img/menuBtn.png) no-repeat;
+    background-size:82/@rem 233/@rem ;
+}
+.menuBtnClos{
+    background-position:center 16/@rem !important;   
+}
+.menuBtnOpen{
+    background-position:center -115/@rem !important;  
+}
+#nav{
+    float: right;
+    padding-top: 21/@rem;
+}
+#nav a{
+    color: #ccc;
+    float: left;
+    width: 111/@rem;
+    height: 78/@rem;
+    line-height: 78/@rem;
+    background:#690;
+    margin-right: 15/@rem;
+    font-size: 42/@rem;
+    text-align: center;
+    border-radius: 8/@rem;
+}
+#nav #searchBtn{
+    width: 130/@rem;
+    height:88/@rem;
+    line-height: 88/@rem;
+    color: #fff;
+    margin-right:30/@rem ;
+    margin-top: 3/@rem;
+    font-weight: bold;
+    border-radius: 10/@rem;
+}
+#search{
+    height:103/@rem ;
+    padding: 16/@rem;
+}
+#search input[type="text"]{
+    float: left;
+    box-sizing: border-box;
+    width: 829/@rem;
+    height: 103/@rem;
+    background: #999;
+    padding:5/@rem 20/@rem;
+    font-size: 41/@rem;
+    color: #333;
+    border-radius: 15/@rem 0 0 15/@rem;
+    border: 1px solid #5a5a5a;
+}
+#search input[type="text"]:focus{
+    background:#FFFFFF;
+}
+#search input[type="text"]::-webkit-input-placeholder{
+    color: #333;
+}
+#search input[type="submit"]{
+    float: right;
+    box-sizing: border-box;
+    width: 203/@rem;
+    height: 103/@rem;
+    background:#414040;;
+    font-size: 55/@rem;
+    color: #fff;
+    border-radius:0 15/@rem 15/@rem 0;
+    border: none;
+}
+#mask{
+    display: none;
+    position: absolute;
+    top: 135/@rem;
+    z-index: 999;
+    width: 100%;
+    padding: 10/@rem 0;
+    background: rgba(0, 0, 0, .8);
+}
+#mask:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #6a6a6a;
+    transform: scaleY(.5);
+}
+#mask li{
+    width: 22.5%;
+    height: 135/@rem;
+    line-height: 135/@rem;
+    float:left;
+    text-align: center;
+}
+#mask a{
+    font-size: 54/@rem;
+    color: #fff;
+}
+//内容区
+#content{
+    position: absolute;
+    top:270/@rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#navs{
+    position: relative;
+    box-sizing: border-box;
+    height: 177/@rem;
+    padding: 31/@rem 0 14/@rem;
+}
+#navs:after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    height: 1px;
+    background: #CCCCCC;
+    width: 100%;
+    transform: scaleY(.5);
+}
+#navs ul{
+    //改变ul的盒模型特点，使它可以被内容撑开
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+}
+#navs li{
+    display: inline-block;
+    font-size: 1rem;
+    height: 129/@rem;
+    line-height: 129/@rem;
+}
+#navs li a{
+    display: block;
+    height: 100%;
+    padding: 0 38/@rem;
+    color: #020202;
+}
+#navs .active{
+    background:  #690;
+    color:  #fff;
+}
+
+
+#pic_wrap{
+    position: relative;
+}
+#pic_list{
+    position: absolute;
+    list-style: none;
+    overflow: hidden;
+}
+#pic_list img{
+    display: block;
+    /*图片自适应*/
+    width: 100%;
+}
+#pic_list li{
+    float: left;
+}
+#pic_nav{
+    position: absolute;
+    left: 0;
+    bottom: 3/@rem;
+    width: 100%;
+    text-align: center;
+}
+#pic_nav span{
+    display: inline-block;
+    width: 20/@rem;
+    height: 20/@rem;
+    background: gray;
+    border-radius: 10/@rem; /*在移动端使用圆角最好使用像素值*/
+}
+#pic_nav .active{
+    background: deeppink;
+}
+//tab
+.tab{
+    width: 1046/@rem;
+    background: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.tab_h{
+    height: 105/@rem;
+    line-height: 105/@rem;
+}
+.tab_h h2{
+    float: left;
+    font-size: 1rem;
+    color: #333;
+}
+.tab_h a{
+    float: right;
+    font-size: .8rem;
+    color: #333;
+}
+.tab .tab_nav{
+    position: relative;
+    height: 105/@rem;
+    line-height: 105/@rem;
+}
+.tab .tab_nav a{
+    float: left;
+    height: 105/@rem;
+    width: 120/@rem;
+    font-size: 44/@rem;
+    text-align: center;
+    color: #6b6b6b;
+}
+.tab .tab_nav span{
+    position: absolute;
+    left: 0;
+    bottom: 8/@rem;
+    width: 120/@rem;
+    height: 9/@rem;
+    background: #6f900d;
+    transition: .5s;
+}
+.tab .tab_wrap {
+    overflow: hidden;
+    width: 300%;
+}
+.tab .tab_wrap ul{
+    overflow: hidden;
+    float: left;
+    width: 33.3333333333333333333333%;
+}
+.tab .tab_wrap ul li{
+    float: left;
+    box-sizing: border-box;
+    width: 506/@rem;
+    margin: 8/@rem;
+    padding: 5/@rem;
+    font-size: 40/@rem;
+    background:#efefef ;
+    color: #000;
+}
+.tab .tab_wrap li a{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tab .tab_wrap li a span{
+    color: #000;
+}
+.tab .tab_wrap li img{
+    width: 100%;
+}
+.ice{
+    overflow: hidden;
+}
+.ice .ice_l{
+    float: left;
+    margin-right: 0.3rem;
+}
+.ice .ice_r{
+    float: left;
+     margin-right: 0.3rem;
+}
+.ice .ice_l .ice_pic,.ice .ice_r .ice_pic{
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url(../img/ice.png) no-repeat;
+    vertical-align: middle;
+   
+}
+.ice .ice_r .ice_pic{
+    background-position:0 -0.8rem ;
+}
+.tab_wrap .tab_loading{
+    height: 101/@rem;
+    background: url(../img/loading.gif) no-repeat;
+    background-position: 50% 50%;
+    opacity: 0;
+}
+//滚动条
+#scrollBar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 12/@rem;
+    height: 100%;
+    background: deeppink;
+    opacity: 0;
+    transition: 1s opacity;
+}
